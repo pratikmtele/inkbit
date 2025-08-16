@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="px-6 py-5 md:px-36 md:py-10 bg-light dark:bg-dark">
+    <div className="py-3 px-6 md:px-12 lg:px-36 md:py-10 bg-light dark:bg-dark">
       <div className="flex gap-5 flex-col md:flex-row">
         <div className="flex-2 md:px-3">
           <Image src={Logo} width={130} height={130} alt="Inkbit" />
@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
       <div className="bg-light dark:bg-dark text-center pt-10">
         <p className="text-sm text-dark dark:text-light font-extralight">
-          Copyright 2025 by Pratik Tele. All Rights Reserved
+          Copyright<sup>&copy;</sup> 2025 by Pratik Tele. All Rights Reserved
         </p>
       </div>
     </div>

@@ -47,6 +47,7 @@ export default function Header() {
           animate={isMobile ? (isNavbarOpen ? "open" : "closed") : "open"}
           variants={navVariants}
           transition={{ type: "tween" }}
+          onWheel={() => setIsNavnarOpen(false)}
         >
           <div className="w-full flex justify-end mb-3 md:hidden">
             <IoCloseOutline
