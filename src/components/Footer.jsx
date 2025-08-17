@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="py-3 px-6 md:px-12 lg:px-36 md:py-10 bg-light dark:bg-dark">
+    <div className="section-container py-10 bg-light dark:bg-dark">
       <div className="flex gap-5 flex-col md:flex-row">
         <div className="flex-2 md:px-3">
           <Image src={Logo} width={130} height={130} alt="Inkbit" />

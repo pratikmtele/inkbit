@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -6,7 +8,7 @@ export default function Button({ label, className }) {
 
   return (
     <motion.button
-      className={`relative overflow-hidden ${className} rounded-lg`}
+      className={`relative overflow-hidden bg-primary border border-transparent py-2 px-5 cursor-pointer flex-shrink-0 ${className} rounded-lg`}
       onHoverStart={() => setIsHover(true)}
       onTouchStart={() => setIsHover(true)}
       onTouchEnd={() => setIsHover(false)}

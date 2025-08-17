@@ -33,7 +33,7 @@ export default function Header() {
   };
 
   return (
-    <div className="py-3 px-6 md:px-12 lg:px-36 flex justify-between items-center bg-white dark:bg-black">
+    <div className="section-container py-3 flex justify-between items-center bg-white dark:bg-black">
       <h2 className="text-primary">
         <Link href="/">
           <Image src={Logo} width={130} height={130} alt="Inkbit" />
@@ -67,10 +67,7 @@ export default function Header() {
           <li className="w-full md:w-fit relative animated-underline">
             <Link href="#">Sign In</Link>
           </li>
-          <Button
-            label="Get Started"
-            className="bg-primary border border-transparent py-2 px-5 cursor-pointer flex-shrink-0 mt-3 md:mt-0"
-          />
+          <Button label="Get Started" />
         </motion.ul>
         <FiMenu
           className="text-xl cursor-pointer md:hidden text-dark dark:text-light"

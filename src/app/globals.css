@@ -3,12 +3,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --breakpoint-lg: 75rem;
+  /*changing lg to 1200px */
+
   /* Fonts */
   --font-primary: "Inter";
   --font-code: "Fira Code";
 
   /* Font sizes */
   --text-*: initial;
+  --text-xs: 12px;
   --text-sm: 14px;
   --text-md: 16px;
   --text-lg: 20px;
@@ -25,23 +29,27 @@
   --color-dark: #242424;
   --color-light: #F5F5F5;
   --color-gray: #E5E7EB;
-  --color-text-gray: #6B7280;
+  --color-dark-gray: #6B7280;
 }
 
 body {
   @apply font-primary
 }
 
+.section-container {
+  @apply px-6 md:px-12 lg:px-36
+}
+
 h1 {
-  @apply text-3xl font-bold text-dark dark:text-light
+  @apply text-2xl md:text-3xl font-bold text-dark dark:text-light
 }
 
 h2 {
-  @apply text-2xl font-bold
+  @apply text-xl md:text-2xl font-bold
 }
 
 h3 {
-  @apply text-lg font-bold leading-4
+  @apply text-lg font-bold
 }
 
 .animated-underline {
@@ -70,12 +78,18 @@ h3 {
   transform: scaleX(1);
 }
 
-@media only screen and (max-width: 768px) {
-  h1 {
-    @apply text-2xl
-  }
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
-  h2 {
-    @apply text-xl
-  }
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
