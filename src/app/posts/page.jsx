@@ -156,7 +156,7 @@ export default function Posts() {
                   key={latestPost.key}
                   title={latestPost.title}
                   imageUrl={latestPost.imageUrl}
-                  className={"border-b border-b-dark-gray py-5 flex flex-row gap-2 items-center"}
+                  className={"border-b border-b-gray dark:border-b-dark-gray py-5 flex flex-row gap-2 items-center"}
                   date={latestPost.date}
                   postUrl={latestPost.postUrl} />
               ))
