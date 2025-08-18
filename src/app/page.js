@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import Button from "@/components/Button";
 import FeaturedPost from "../../public/featured_post.png";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import Badge from "@/components/Badge";
 import Slider from "@/components/Slider";
 import PostCard from "@/components/PostCard";
 import PostFeed from "@/components/PostFeed";
+import CategoryTags from "@/components/CategoryTags";
 
 export default function App() {
   const posts = [
@@ -48,6 +49,7 @@ export default function App() {
       category: "Coding",
       author: "Pratik Tele",
       date: "17 Aug, 2025",
+      postUrl: "#"
     },
     {
       id: 2,
@@ -55,6 +57,7 @@ export default function App() {
       category: "Web Development",
       author: "Pratik Tele",
       date: "14 Aug, 2025",
+      postUrl: "#"
     },
     {
       id: 3,
@@ -62,6 +65,7 @@ export default function App() {
       category: "Technology",
       author: "Pratik Tele",
       date: "10 Aug, 2025",
+      postUrl: "#"
     },
     {
       id: 4,
@@ -69,15 +73,33 @@ export default function App() {
       category: "Lifestyle",
       author: "Pratik Tele",
       date: "8 Aug, 2025",
+      postUrl: "#"
     },
     {
-      id: 3,
+      id: 5,
       title: "Every React Concept Explained in 5 Minutes",
       category: "Web development",
       author: "Pratik Tele",
       date: "10 Aug, 2025",
+      postUrl: "#"
     },
   ];
+
+  const categoryTags = [
+  { id: 1, label: "Coding", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+  { id: 2, label: "Technology", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+  { id: 3, label: "Lifestyle", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
+  { id: 4, label: "Travel", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
+  { id: 5, label: "Web Development", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+  { id: 6, label: "Fashion", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+  { id: 7, label: "Culture", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
+  { id: 8, label: "Food", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+  { id: 9, label: "Style", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+  { id: 10, label: "Food", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
+  { id: 11, label: "Games", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+  { id: 12, label: "Finance", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+  { id: 13, label: "Politics", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+];
 
   return (
     <main className="bg-white dark:bg-black">
@@ -97,7 +119,7 @@ export default function App() {
         <Image
           src={FeaturedPost}
           alt="title"
-          className=" drop-shadow-lg flex-1 md:w-80"
+          className=" drop-shadow-lg flex-1 md:w-80 rounded-lg"
         />
         <div className="flex-1 flex flex-col gap-2 justify-center text-dark dark:text-light">
           <Badge
@@ -151,15 +173,28 @@ export default function App() {
         {/* side section */}
         <div className="flex-1">
           <div className="flex flex-col gap-1">
-            <h3 className="mb-1">Most Popular</h3>
+            <h3 className="mb-1 text-dark dark:text-light">Most Popular</h3>
             {postFeeds.map((feed) => (
               <PostFeed
+                key={feed.id}
                 title={feed.title}
                 category={feed.category}
                 author={feed.author}
                 date={feed.date}
+                className={"mt-3 md:mt-5"}
               />
             ))}
+          </div>
+          {/* Categories */}
+          <div className="mt-5">
+            <h3 className="text-dark dark:text-light mb-3">Categories</h3>
+            <div className="flex flex-row flex-wrap gap-1">
+              {
+                categoryTags.map((categoryTag)=>(
+                  <CategoryTags key={categoryTag.id} label={categoryTag.label} className={categoryTag.className} slug={categoryTag.slug}/>
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>

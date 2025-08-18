@@ -15,7 +15,7 @@ export default function PostCard({
     <>
       {variant === "horizontal" ? (
         <div className="flex flex-col md:flex-row border border-gray dark:border-transparent rounded-lg md:flex-1 overflow-hidden shadow-md">
-          <div className="relative w-full h-full  md:w-[270px] md:h-[260px]">
+          <div className="relative w-full h-full  md:w-[270px] md:h-auto">
             <Image
               src={imageUrl}
               alt={title}
@@ -23,7 +23,6 @@ export default function PostCard({
               height={180}
               className="object-cover object-center w-full h-full block md:hidden"
             />
-
             <Image
               src={imageUrl}
               alt={title}
@@ -50,25 +49,25 @@ export default function PostCard({
           </div>
         </div>
       ) : (
-        <div className="max-w-xs border rounded-lg overflow-hidden shadow-md">
-          <div className="relative h-48">
-            <Image src={imageUrl} alt={title} fill className="object-cover" />
+        <div className="max-w-[400px] h-full border border-gray dark:border-dark rounded-lg overflow-hidden shadow-md dark:shadow">
+          <div className="relative h-64 overflow-hidden">
+            <Image src={imageUrl} alt={title} fill className="object-cover hover:scale-105 transition-transform ease-in-out duration-300" />
           </div>
 
           <div className="p-4">
-            <h2 className="text-lg font-bold">{title}</h2>
-            <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
+            <h2 className="!text-lg font-bold line-clamp-2 text-dark dark:text-light">{title}</h2>
+            <p className="text-sm text-dark dark:text-gray line-clamp-3 mt-1">{description}</p>
 
-            <div className="flex justify-between items-center mt-2 text-xs text-dark-gray">
-              <span>By {author}</span>
+            <div className="flex justify-between items-center mt-3 text-xs text-dark-gray">
+              <span>{author ? `By ${author}` : ""}</span>
               <span>{date}</span>
             </div>
 
             <Link
               href={slug}
-              className="text-sm text-blue-600 font-medium mt-2 block"
+              className="text-sm w-fit text-dark dark:text-light font-medium border-b-[1.6px] hover:border-primary hover:text-primary transition-colors ease-in-out duration-200"
             >
-              Read More
+              Read More 
             </Link>
           </div>
         </div>

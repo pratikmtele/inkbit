@@ -19,7 +19,7 @@ export default function Button({ label, className }) {
         animate={{ scaleX: isHover ? 1 : 0 }}
         initial={{ scaleX: 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="absolute left-0 top-0 bottom-0 w-full bg-white origin-left z-0"
+        className="absolute left-0 top-0 bottom-0 w-full bg-white dark:bg-black origin-left z-0"
         style={{ pointerEvents: "none" }}
       />
       <span

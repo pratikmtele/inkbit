@@ -30,6 +30,9 @@
   --color-light: #F5F5F5;
   --color-gray: #E5E7EB;
   --color-dark-gray: #6B7280;
+  --color-orange: #FF5722;
+  --color-pink: #E91E63;
+  --color-indigo: #3F51B5;
 }
 
 body {
