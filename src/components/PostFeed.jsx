@@ -24,7 +24,7 @@ export default function PostFeed({ title, postUrl, imageUrl, category, author, d
         </Link>
         <p className="text-sm">
           {author && <span className="text-dark dark:text-light">{author}&nbsp;-&nbsp;</span>}
-          <span className="text-dark-gray">{date}</span>
+          <span className="text-dark-gray dark:text-gray">{date}</span>
         </p>
       </div>
     </div>

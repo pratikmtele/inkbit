@@ -27,7 +27,7 @@ export default function Footer() {
                 className="animated-underline mt-5 mb-3"
                 style={{ display: "block", width: "fit-content" }}
               >
-                <Link href="#">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li
                 className="animated-underline mb-3"
@@ -56,15 +56,15 @@ export default function Footer() {
               Follow us on
             </h4>
             <div className="flex gap-3">
-              <SocialIcons Icon={FaFacebookF} slug="#" />
-              <SocialIcons Icon={FaInstagram} slug="#" />
-              <SocialIcons Icon={FaGithub} slug="#" />
+              <SocialIcons Icon={FaFacebookF} slug="#"/>
+              <SocialIcons Icon={FaInstagram} slug="#"/>
+              <SocialIcons Icon={FaGithub} slug="#"/>
             </div>
           </div>
         </div>
       </div>
       <div className="bg-light dark:bg-dark text-center pt-10">
-        <p className="text-sm text-dark dark:text-light font-extralight">
+        <p className="text-sm text-dark dark:text-light font-light">
           Copyright<sup>&copy;</sup> 2025 by Pratik Tele. All Rights Reserved
         </p>
       </div>
