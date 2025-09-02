@@ -1,12 +1,13 @@
-import React, { lazy } from "react";
+import React from "react";
 import Button from "@/components/Button";
-import FeaturedPost from "../../public/featured_post.png";
+import FeaturedPost from "../../../public/featured_post.png";
 import Image from "next/image";
 import Badge from "@/components/Badge";
 import Slider from "@/components/Slider";
 import PostCard from "@/components/PostCard";
 import PostFeed from "@/components/PostFeed";
 import CategoryTags from "@/components/CategoryTags";
+import TypewriterEffect from "@/components/TypewriterEffect";
 
 export default function App() {
   const posts = [
@@ -86,28 +87,26 @@ export default function App() {
   ];
 
   const categoryTags = [
-  { id: 1, label: "Coding", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
-  { id: 2, label: "Technology", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
-  { id: 3, label: "Lifestyle", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
-  { id: 4, label: "Travel", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
-  { id: 5, label: "Web Development", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
-  { id: 6, label: "Fashion", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
-  { id: 7, label: "Culture", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
-  { id: 8, label: "Food", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
-  { id: 9, label: "Style", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
-  { id: 10, label: "Food", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
-  { id: 11, label: "Games", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
-  { id: 12, label: "Finance", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
-  { id: 13, label: "Politics", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
-];
+    { id: 1, label: "Coding", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+    { id: 2, label: "Technology", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+    { id: 3, label: "Lifestyle", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
+    { id: 4, label: "Travel", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
+    { id: 5, label: "Web Development", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+    { id: 6, label: "Fashion", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+    { id: 7, label: "Culture", className: "bg-pink/30 dark:bg-pink/70", slug: "#" },
+    { id: 8, label: "Food", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+    { id: 9, label: "Style", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+    { id: 10, label: "Food", className: "bg-orange/30 dark:bg-orange/70", slug: "#" },
+    { id: 11, label: "Games", className: "bg-primary/30 dark:bg-primary/70", slug: "#" },
+    { id: 12, label: "Finance", className: "bg-secondary/30 dark:bg-secondary/70", slug: "#" },
+    { id: 13, label: "Politics", className: "bg-indigo/30 dark:bg-indigo/70", slug: "#" },
+  ];
 
   return (
     <main className="bg-white dark:bg-black">
       {/* hero section */}
       <div className="section-container py-10 flex flex-col w-full gap-4 items-center bg-light dark:bg-dark">
-        <h1 className="text-center lg:w-2/3">
-          Write, Share, and Inspire — Because Every Story Deserves an Audience
-        </h1>
+        <TypewriterEffect />
         <p className="text-md text-dark-gray dark:text-gray font-light text-center">
           Read and write amazing stories from people around the world.
         </p>
@@ -190,8 +189,8 @@ export default function App() {
             <h3 className="text-dark dark:text-light mb-3">Categories</h3>
             <div className="flex flex-row flex-wrap gap-1">
               {
-                categoryTags.map((categoryTag)=>(
-                  <CategoryTags key={categoryTag.id} label={categoryTag.label} className={categoryTag.className} slug={categoryTag.slug}/>
+                categoryTags.map((categoryTag) => (
+                  <CategoryTags key={categoryTag.id} label={categoryTag.label} className={categoryTag.className} slug={categoryTag.slug} />
                 ))
               }
             </div>

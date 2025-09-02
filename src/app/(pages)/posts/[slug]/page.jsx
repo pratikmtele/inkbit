@@ -264,7 +264,7 @@ export default async function PostPage({ params }) {
               </h4>
               {
                 comments.map((comment)=>(
-                  <Comment avatar={comment.avatar} author={comment.author} date={comment.date} comment={comment.comment}/>
+                  <Comment key={comment.id} avatar={comment.avatar} author={comment.author} date={comment.date} comment={comment.comment}/>
                 ))
               }
             </div>

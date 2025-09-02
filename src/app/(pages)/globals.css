@@ -39,6 +39,23 @@ body {
   @apply font-primary
 }
 
+/* quill fonts */
+.ql-font-sans {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ql-font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.ql-font-monospace {
+  font-family: "Courier New", monospace;
+}
+.ql-font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.ql-font-times-new-roman {
+  font-family: "Times New Roman", serif;
+}
+
 .section-container {
   @apply px-6 md:px-12 lg:px-36
 }
@@ -95,4 +112,8 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
+}
+
+.Typewriter__cursor {
+      @apply text-primary font-bold
 }

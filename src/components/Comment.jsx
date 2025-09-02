@@ -5,7 +5,7 @@ export default function Comment({avatar, author, date, comment}) {
         <div className="mt-5">
             <div className="flex gap-3 items-center">
                 <div className="relative overflow-hidden w-[35px] h-[35px] bg-light dark:bg-dark rounded-full">
-                    <Image src={avatar} fill className="object-cover"/>
+                    <Image src={avatar} fill className="object-cover" alt={author}/>
                 </div>
                 <div>
                     <h5 className="text-dark dark:text-light text-sm">{author}</h5>
