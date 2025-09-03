@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata = {
-  title: "Inkbit - A Blog website",
+  title: "Inkbit - Write a blog",
   description: "A modern blog website",
 };
 

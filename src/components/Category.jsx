@@ -11,6 +11,7 @@ export default function Category({ label, imageUrl, slug }) {
           src={imageUrl}
           alt={label}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover brightness-50 transition-transform duration-300 ease-in-out hover:scale-110"
         />
         <h4 className="text-md absolute left-4 bottom-2 text-white underline underline-offset-4 w-fit">

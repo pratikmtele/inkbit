@@ -14,19 +14,21 @@ export default function PostCard({
   return (
     <>
       {variant === "horizontal" ? (
-        <div className="flex md:min-h-[280px] flex-col md:flex-row border border-gray dark:border-transparent rounded-lg md:flex-1 overflow-hidden shadow-md group">
-          <div className="relative w-full h-full  md:w-[270px] md:h-auto">
+        <div className="flex md:min-h-[280px] flex-col md:flex-row md:gap-5 border border-gray dark:border-transparent rounded-lg md:flex-1 overflow-hidden shadow-md group">
+          <div className="relative w-full h-full  md:w-[300px] md:h-auto">
             <Image
               src={imageUrl}
               alt={title}
               width={400}
               height={180}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center w-full h-full block md:hidden group-hover:scale-105 transition-transform ease-in-out duration-300"
             />
             <Image
               src={imageUrl}
               alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center hidden md:block group-hover:scale-105 transition-transform ease-in-out duration-300"
             />
           </div>
