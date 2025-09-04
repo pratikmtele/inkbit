@@ -56,13 +56,13 @@ export default function Header() {
             />
           </div>
           <li className="w-full md:w-fit relative animated-underline">
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li className="w-full md:w-fit relative animated-underline">
             <Link href="#">About</Link>
           </li>
           <li className="w-full md:w-fit relative animated-underline">
-            <Link href="#">Write</Link>
+            <Link href="/write">Write</Link>
           </li>
           <li className="w-full md:w-fit relative animated-underline">
             <Link href="#">Sign In</Link>

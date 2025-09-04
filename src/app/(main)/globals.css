@@ -39,34 +39,6 @@ body {
   @apply font-primary
 }
 
-/* quill editor css */
-
-.ql-editor {
-  padding: 6px 12px !important;
-  @apply font-primary text-md p-0
-}
-
-/* quill fonts */
-.ql-font-sans {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.ql-font-serif {
-  font-family: Georgia, "Times New Roman", serif;
-}
-.ql-font-monospace {
-  font-family: "Courier New", monospace;
-}
-.ql-font-roboto {
-  font-family: "Roboto", sans-serif;
-}
-.ql-font-times-new-roman {
-  font-family: "Times New Roman", serif;
-}
-
-.ql-font-inter {
-  @apply font-primary
-}
-
 .section-container {
   @apply px-6 md:px-12 lg:px-36
 }

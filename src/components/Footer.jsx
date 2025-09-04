@@ -33,7 +33,7 @@ export default function Footer() {
                 className="animated-underline mb-3"
                 style={{ width: "fit-content" }}
               >
-                <Link href="#">Write</Link>
+                <Link href="/write">Write</Link>
               </li>
               <li
                 className="animated-underline mb-3"
@@ -45,7 +45,7 @@ export default function Footer() {
                 className="animated-underline"
                 style={{ display: "block", width: "fit-content" }}
               >
-                <Link href="#">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>

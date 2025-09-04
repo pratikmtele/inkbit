@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
-import "../(pages)/globals.css"
-import "../(pages)/app.css";
+import "../(main)/globals.css"
+import "../(main)/app.css";
 
 export const metadata = {
   title: "Inkbit - A Blog website",

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mgreminger/quill-image-resize-module": "^1.0.5",
     "cloudinary": "^2.7.0",
     "framer-motion": "^12.23.12",
     "mongoose": "^8.17.1",

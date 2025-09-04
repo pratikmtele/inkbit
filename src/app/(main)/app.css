@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* quill editor css */
+
+.ql-editor {
+  padding: 6px 12px !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* quill fonts */
+.ql-font-sans {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ql-font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.ql-font-monospace {
+  font-family: "Courier New", monospace;
+}
+.ql-font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.ql-font-times-new-roman {
+  font-family: "Times New Roman", serif;
+}
+
+.ql-bubble .ql-picker.ql-font .ql-picker-item[data-value="Inter"]::before {
+  content: "Inter";
+  font-family: "Inter", sans-serif;
+}
+
+.ql-font-Inter {
+  font-family: "Inter", sans-serif;
+}
