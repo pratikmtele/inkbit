@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
-export default function Button({ label, className }) {
+export default function Button({ label, className, onClickHandler }) {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -14,6 +14,7 @@ export default function Button({ label, className }) {
       onTouchEnd={() => setIsHover(false)}
       onHoverEnd={() => setIsHover(false)}
       type="button"
+      onClick={onClickHandler}
     >
       <motion.div
         animate={{ scaleX: isHover ? 1 : 0 }}

@@ -9,12 +9,16 @@ import { FiMenu } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Logo from "../../public/inkbit_logo.png";
 import Image from "next/image";
+import Modal from "./Modal";
+import { useModal } from "@/store/useModalStore";
 
 export default function Header() {
   const [isNavbarOpen, setIsNavnarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false
   );
+
+  const {toggleModal} = useModal();
 
   useEffect(() => {
     const handleResize = () => {
@@ -67,7 +71,8 @@ export default function Header() {
           <li className="w-full md:w-fit relative animated-underline">
             <Link href="#">Sign In</Link>
           </li>
-          <Button label="Get Started" />
+          <Button label="Get Started" onClickHandler={toggleModal}/>
+          <Modal></Modal>
         </motion.ul>
         <FiMenu
           className="text-xl cursor-pointer md:hidden text-dark dark:text-light"

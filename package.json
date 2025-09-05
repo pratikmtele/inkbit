@@ -23,7 +23,8 @@
     "react-quill": "^2.0.0",
     "swiper": "^11.2.10",
     "typewriter-effect": "^2.22.0",
-    "zod": "^4.0.17"
+    "zod": "^4.0.17",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
